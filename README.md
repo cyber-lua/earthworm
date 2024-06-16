@@ -1,9 +1,9 @@
-# dumbasslang
+# earthworm
 A python based module because i got bored
 
 Currently has no public builds.
 
-# Dumbasslang documentation
+# earthworm documentation
 
 output(text)
 > outputs something to the terminal
