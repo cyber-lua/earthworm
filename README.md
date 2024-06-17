@@ -16,3 +16,6 @@ randomint(min, max)
 
 ifequals(condition, equals, code)
 > If condition == equals then code
+
+add, read, remove file
+> Does their respective actions with a file
