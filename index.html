@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earthworm Python Module</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        main {
+            padding: 2em;
+        }
+
+        #description, #downloads {
+            margin-bottom: 2em;
+        }
+
+        h2 {
+            color: #4CAF50;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 0.5em 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            background-color: #4CAF50;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        #searchBar {
+            margin-bottom: 1em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://raw.githubusercontent.com/xyzbeepo/earthworm/main/earthwormlogo.png?token=GHSAT0AAAAAACRPCRGKQVKVX2H6IA32WJAWZTP4ZIQ" alt="Earthworm Icon" width="150" height="150">
+    </header>
+    <main>
+        <section id="description">
+            <h2>About Earthworm</h2>
+            <p>Python but worse.. thats it.</p>
+        </section>
+        <section id="downloads">
+            <h2>Download Versions</h2>
+            <input type="text" id="searchBar" placeholder="Search for a version..." onkeyup="filterVersions()">
+            <ul id="versionList">
+                <li><a href="versions/earthwormv1/v1.0.py" download>Earthworm v1.0.0</a></li>
+                <li><a href="versions/earthwormv1/v1.1.py" download>Earthworm v1.1.0</a></li>
+                <!-- Add more versions as necessary -->
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Earthworm. All rights reserved.</p>
+    </footer>
+    <script>
+        function filterVersions() {
+            const searchInput = document.getElementById('searchBar').value.toLowerCase();
+            const versionList = document.getElementById('versionList');
+            const versions = versionList.getElementsByTagName('li');
+
+            for (let i = 0; i < versions.length; i++) {
+                const version = versions[i].getElementsByTagName('a')[0];
+                if (version.innerHTML.toLowerCase().indexOf(searchInput) > -1) {
+                    versions[i].style.display = '';
+                } else {
+                    versions[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
