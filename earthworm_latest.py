@@ -9,11 +9,6 @@ import itertools
 import hashlib
 
 # Utility functions
-def generate_maze(width, height):
-    """Generate a simple ASCII maze of the given width and height."""
-    maze = [['#' if x % 2 == 0 or y % 2 == 0 else ' ' for x in range(width)] for y in range(height)]
-    return '\n'.join(''.join(row) for row in maze)
-
 def make_variable(var_type, var_data):
     """Create a variable of the given type and data."""
     return eval(f"{var_type}({repr(var_data)})")
