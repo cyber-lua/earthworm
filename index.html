@@ -3,106 +3,361 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <title>Earthworm</title>
+    <title>Earthworm - Python Scripting Made Easy</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-        }
+        /* General styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #d8cfc4; /* Light brown color inspired by an earthworm */
+    color: #333;
+}
 
-        header {
-            background-color: #4CAF50;
-            color: white;
-            text-align: center;
-            padding: 1em 0;
-        }
+header {
+    background: #8c6d62; /* Earthworm brown color */
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
 
-        main {
-            padding: 2em;
-        }
+nav {
+    background: #6f5147; /* Darker brown for contrast */
+    padding: 0.5rem;
+    text-align: center;
+}
 
-        #description, #downloads {
-            margin-bottom: 2em;
-        }
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
 
-        h2 {
-            color: #4CAF50;
-        }
+nav ul li {
+    margin: 0 1rem;
+}
 
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
 
-        ul li {
-            margin: 0.5em 0;
-        }
+main {
+    padding: 2rem;
+}
 
-        a {
-            text-decoration: none;
-            color: #4CAF50;
-            font-weight: bold;
-        }
+section {
+    margin-bottom: 2rem;
+}
 
-        a:hover {
-            text-decoration: underline;
-        }
+h1, h2 {
+    color: #333;
+}
 
-        footer {
-            text-align: center;
-            padding: 1em 0;
-            background-color: #4CAF50;
-            color: white;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
+pre {
+    background: #eee;
+    padding: 1rem;
+    border-left: 5px solid #8c6d62;
+    overflow-x: auto;
+}
 
-        #searchBar {
-            margin-bottom: 1em;
-        }
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background: #fff;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+}
+
+footer {
+    background: #8c6d62; /* Earthworm brown color */
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Search bar styles */
+#search-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+#search-input {
+    width: 80%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#search-button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background: #6f5147; /* Darker brown */
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 0.5rem;
+}
+
     </style>
 </head>
 <body>
     <header>
-        <img src="https://raw.githubusercontent.com/xyzbeepo/earthworm/main/earthwormlogo.png?token=GHSAT0AAAAAACRPCRGKQVKVX2H6IA32WJAWZTP4ZIQ" alt="Earthworm Icon" width="150" height="150">
+        <h1>Welcome to Earthworm</h1>
+        <p>Your guide to easy Python scripting</p>
     </header>
     <main>
-        <section id="description">
-            <h2>About Earthworm</h2>
-            <p>Python but worse.. thats it.</p>
+        <div id="search-bar">
+            <input type="text" id="search-input" placeholder="Search...">
+            <button id="search-button">Search</button>
+        </div>
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>Earthworm is a Python module designed to make scripting easier for beginners. With a wide range of simple commands, Earthworm helps you perform common tasks without needing to memorize complex syntax.</p>
         </section>
-        <section id="downloads">
-            <h2>Download Versions</h2>
-            <input type="text" id="searchBar" placeholder="Search for a version..." onkeyup="filterVersions()">
-            <ul id="versionList">
-                <li><a href="versions/earthwormv1/v1.0.py" download>Earthworm v1.0.0</a></li>
-                <li><a href="versions/earthwormv1/v1.1.py" download>Earthworm v1.1.0</a></li>
-                <!-- Add more versions as necessary -->
+        <section id="getting-started">
+            <h2>Getting Started</h2>
+            <p>To start using Earthworm, you need to import it into your Python script. Here’s how you can do it:</p>
+            <pre><code>import earthworm as ew</code></pre>
+            <p>Once imported, you can start using the various commands provided by Earthworm.</p>
+        </section>
+        <section id="commands">
+            <h2>Commands</h2>
+            <p>Earthworm provides a variety of commands to make your scripting experience smoother. Here are all the commands you can use:</p>
+            <ul>
+                <li><code>ew.output(text)</code>: Prints the given text.</li>
+                <li><code>ew.add(val1, val2)</code>: Returns the sum of <code>val1</code> and <code>val2</code>.</li>
+                <li><code>ew.subtract(val1, val2)</code>: Returns the difference between <code>val1</code> and <code>val2</code>.</li>
+                <li><code>ew.multiply(val1, val2)</code>: Returns the product of <code>val1</code> and <code>val2</code>.</li>
+                <li><code>ew.divide(val1, val2)</code>: Returns the quotient of <code>val1</code> divided by <code>val2</code>.</li>
+                <li><code>ew.ask(question)</code>: Prompts the user with a question and returns the input.</li>
+                <li><code>ew.thank_you()</code>: Prints a thank you message.</li>
+                <li><code>ew.random_integer(min_val, max_val)</code>: Returns a random integer between <code>min_val</code> and <code>max_val</code>.</li>
+                <li><code>ew.countdown(seconds)</code>: Performs a countdown from the given number of seconds.</li>
+                <li><code>ew.generate_maze(width, height)</code>: Generates a simple ASCII maze of the given width and height.</li>
+                <li><code>ew.make_variable(var_type, var_data)</code>: Creates a variable of the given type and data.</li>
+                <li><code>ew.calculate_factorial(n)</code>: Returns the factorial of <code>n</code>.</li>
+                <li><code>ew.fibonacci_sequence(n)</code>: Returns the first <code>n</code> numbers in the Fibonacci sequence.</li>
+                <li><code>ew.current_date()</code>: Returns the current date.</li>
+                <li><code>ew.current_time()</code>: Returns the current system time.</li>
+                <li><code>ew.is_prime(n)</code>: Checks if a number is prime.</li>
+                <li><code>ew.generate_random_string(length)</code>: Generates a random string of the given length.</li>
+                <li><code>ew.create_hash(data, algorithm)</code>: Creates a hash of the given data using the specified algorithm.</li>
+                <li><code>ew.read_file(path)</code>: Reads and returns the contents of a file at the specified path.</li>
+                <li><code>ew.write_file(path, contents)</code>: Writes the given contents to a file at the specified path.</li>
+                <li><code>ew.list_directory(directory)</code>: Lists all files and directories in the specified directory.</li>
+                <li><code>ew.make_directory(path)</code>: Creates a directory at the specified path.</li>
+                <li><code>ew.remove_directory(path)</code>: Removes a directory at the specified path.</li>
+                <li><code>ew.remove_file(path)</code>: Removes a file at the specified path.</li>
+                <li><code>ew.get_file_size(path)</code>: Returns the size of a file at the specified path.</li>
+                <li><code>ew.get_file_extension(filename)</code>: Returns the file extension of the given filename.</li>
+                <li><code>ew.read_lines_from_file(path)</code>: Reads lines from a file and returns them as a list.</li>
+                <li><code>ew.append_to_file(path, contents)</code>: Appends the given contents to a file at the specified path.</li>
+                <li><code>ew.get_file_creation_time(path)</code>: Returns the creation time of a file at the specified path.</li>
+                <li><code>ew.get_file_modification_time(path)</code>: Returns the modification time of a file at the specified path.</li>
+                <li><code>ew.get_file_access_time(path)</code>: Returns the last access time of a file at the specified path.</li>
+                <li><code>ew.generate_uuid()</code>: Generates and returns a new UUID.</li>
+                <li><code>ew.reverse_string(s)</code>: Returns the reverse of the given string.</li>
+                <li><code>ew.is_palindrome(s)</code>: Checks if the given string is a palindrome.</li>
+                <li><code>ew.get_current_working_directory()</code>: Returns the current working directory.</li>
+                <li><code>ew.change_directory(path)</code>: Changes the current working directory to the specified path.</li>
+                <li><code>ew.sleep_for(seconds)</code>: Pauses the script for the given number of seconds.</li>
+                <li><code>ew.roll_dice(sides)</code>: Simulates rolling a dice with the given number of sides (default is 6).</li>
+                <li><code>ew.toss_coin()</code>: Simulates a coin toss.</li>
+                <li><code>ew.find_max_in_list(lst)</code>: Returns the maximum value in the given list.</li>
+                <li><code>ew.find_min_in_list(lst)</code>: Returns the minimum value in the given list.</li>
+                <li><code>ew.calculate_sum(lst)</code>: Returns the sum of the values in the given list.</li>
+                <li><code>ew.calculate_average(lst)</code>: Returns the average of the values in the given list.</li>
+                <li><code>ew.calculate_median(lst)</code>: Returns the median of the values in the given list.</li>
+                <li><code>ew.calculate_standard_deviation(lst)</code>: Returns the standard deviation of the values in the given list.</li>
+                <li><code>ew.factorial(n)</code>: Returns the factorial of <code>n</code>.</li>
+                <li><code>ew.fibonacci(n)</code>: Returns the first <code>n</code> numbers in the Fibonacci sequence.</li>
+                <li><code>ew.is_even(n)</code>: Checks if the given number is even.</li>
+                <li><code>ew.is_odd(n)</code>: Checks if the given number is odd.</li>
+                <li><code>ew.convert_to_uppercase(s)</code>: Converts the given string to uppercase.</li>
+                <li><code>ew.convert_to_lowercase(s)</code>: Converts the given string to lowercase.</li>
+                <li><code>ew.capitalize_string(s)</code>: Capitalizes the first letter of the given string.</li>
+                <li><code>ew.count_occurrences(lst, value)</code>: Counts the number of occurrences of the value in the given list.</li>
+                <li><code>ew.find_index(lst, value)</code>: Finds the index of the first occurrence of the value in the given list.</li>
+                <li><code>ew.sort_list(lst)</code>: Sorts the given list in ascending order.</li>
+                <li><code>ew.reverse_list(lst)</code>: Reverses the given list.</li>
+                <li><code>ew.join_strings(lst, separator)</code>: Joins the strings in the given list with the specified separator.</li>
+                <li><code>ew.split_string(s, separator)</code>: Splits the given string by the specified separator.</li>
+                <li><code>ew.remove_whitespace(s)</code>: Removes leading and trailing whitespace from the given string.</li>
+                <li><code>ew.replace_substring(s, old, new)</code>: Replaces all occurrences of the old substring with the new substring in the given string.</li>
+                <li><code>ew.format_string(template, *args, **kwargs)</code>: Formats the given template string with the specified arguments and keyword arguments.</li>
+                <li><code>ew.get_length(obj)</code>: Returns the length of the given object (string, list, tuple, etc.).</li>
+                <li><code>ew.convert_to_int(s)</code>: Converts the given string to an integer.</li>
+                <li><code>ew.convert_to_float(s)</code>: Converts the given string to a float.</li>
+                <li><code>ew.convert_to_str(obj)</code>: Converts the given object to a string.</li>
+                <li><code>ew.convert_to_list(s)</code>: Converts the given string to a list of characters.</li>
+                <li><code>ew.get_absolute_value(n)</code>: Returns the absolute value of the given number.</li>
+                <li><code>ew.round_number(n, decimals)</code>: Rounds the given number to the specified number of decimal places.</li>
+                <li><code>ew.calculate_power(base, exponent)</code>: Returns the base raised to the power of the exponent.</li>
+                <li><code>ew.calculate_square_root(n)</code>: Returns the square root of the given number.</li>
+                <li><code>ew.calculate_logarithm(n, base)</code>: Returns the logarithm of the given number with the specified base.</li>
+                <li><code>ew.generate_random_float(min_val, max_val)</code>: Generates a random float between <code>min_val</code> and <code>max_val</code>.</li>
+                <li><code>ew.shuffle_list(lst)</code>: Shuffles the elements of the given list.</li>
+                <li><code>ew.sample_list(lst, k)</code>: Returns a sample of <code>k</code> elements from the given list.</li>
+                <li><code>ew.create_tuple(*args)</code>: Creates a tuple with the given arguments.</li>
+                <li><code>ew.create_set(*args)</code>: Creates a set with the given arguments.</li>
+                <li><code>ew.create_dict(**kwargs)</code>: Creates a dictionary with the given keyword arguments.</li>
+                <li><code>ew.merge_dictionaries(dict1, dict2)</code>: Merges two dictionaries into one.</li>
+                <li><code>ew.filter_list(lst, condition)</code>: Filters the given list based on the specified condition.</li>
+                <li><code>ew.map_list(lst, func)</code>: Applies the given function to each element in the list.</li>
+                <li><code>ew.reduce_list(lst, func, initializer)</code>: Applies the given function cumulatively to the items in the list.</li>
+                <li><code>ew.flatten_list(nested_list)</code>: Flattens a nested list.</li>
+                <li><code>ew.generate_combinations(lst, r)</code>: Generates all <code>r</code>-length combinations of the elements in the list.</li>
+                <li><code>ew.generate_permutations(lst, r)</code>: Generates all <code>r</code>-length permutations of the elements in the list.</li>
+                <li><code>ew.zip_lists(*lists)</code>: Zips the given lists together.</li>
+                <li><code>ew.enumerate_list(lst, start)</code>: Enumerates the elements of the list, starting from the specified index.</li>
+                <li><code>ew.create_range(start, stop, step)</code>: Creates a range of numbers from start to stop with the specified step.</li>
+                <li><code>ew.transpose_matrix(matrix)</code>: Transposes the given matrix (list of lists).</li>
+                <li><code>ew.calculate_gcd(a, b)</code>: Calculates the greatest common divisor of two numbers.</li>
+                <li><code>ew.calculate_lcm(a, b)</code>: Calculates the least common multiple of two numbers.</li>
+                <li><code>ew.check_subset(set1, set2)</code>: Checks if set1 is a subset of set2.</li>
+                <li><code>ew.check_superset(set1, set2)</code>: Checks if set1 is a superset of set2.</li>
+                <li><code>ew.calculate_set_union(set1, set2)</code>: Calculates the union of two sets.</li>
+                <li><code>ew.calculate_set_intersection(set1, set2)</code>: Calculates the intersection of two sets.</li>
+                <li><code>ew.calculate_set_difference(set1, set2)</code>: Calculates the difference between two sets.</li>
+                <li><code>ew.calculate_set_symmetric_difference(set1, set2)</code>: Calculates the symmetric difference between two sets.</li>
+                <li><code>ew.get_set_length(s)</code>: Returns the number of elements in the set.</li>
+                <li><code>ew.add_to_set(s, element)</code>: Adds an element to the set.</li>
+                <li><code>ew.remove_from_set(s, element)</code>: Removes an element from the set.</li>
+                <li><code>ew.pop_from_set(s)</code>: Removes and returns an arbitrary element from the set.</li>
+                <li><code>ew.clear_set(s)</code>: Removes all elements from the set.</li>
+                <li><code>ew.combine_sets(set1, set2)</code>: Combines two sets using the union operator.</li>
+                <li><code>ew.intersect_sets(set1, set2)</code>: Finds the intersection of two sets.</li>
+                <li><code>ew.subtract_sets(set1, set2)</code>: Subtracts set2 from set1.</li>
+                <li><code>ew.symmetric_difference_sets(set1, set2)</code>: Finds the symmetric difference of two sets.</li>
+                <li><code>ew.create_frozenset(iterable)</code>: Creates a frozenset from the given iterable.</li>
+                <li><code>ew.make_frozenset_union(set1, set2)</code>: Combines two frozensets using the union operator.</li>
+                <li><code>ew.make_frozenset_intersection(set1, set2)</code>: Finds the intersection of two frozensets.</li>
+                <li><code>ew.make_frozenset_difference(set1, set2)</code>: Finds the difference of two frozensets.</li>
+                <li><code>ew.make_frozenset_symmetric_difference(set1, set2)</code>: Finds the symmetric difference of two frozensets.</li>
+                <li><code>ew.check_frozenset_subset(set1, set2)</code>: Checks if set1 is a subset of set2.</li>
+                <li><code>ew.check_frozenset_superset(set1, set2)</code>: Checks if set1 is a superset of set2.</li>
+                <li><code>ew.create_frozenset_copy(fset)</code>: Creates a shallow copy of a frozenset.</li>
+                <li><code>ew.check_if_empty(iterable)</code>: Checks if the given iterable is empty.</li>
+                <li><code>ew.reverse_iterable(iterable)</code>: Returns a reversed version of the given iterable.</li>
+                <li><code>ew.generate_arithmetic_sequence(start, stop, step)</code>: Generates an arithmetic sequence from start to stop with the given step.</li>
+                <li><code>ew.generate_geometric_sequence(start, ratio, n)</code>: Generates a geometric sequence starting from start with the given ratio for <code>n</code> terms.</li>
+                <li><code>ew.find_unique_elements(lst)</code>: Finds and returns the unique elements in the given list.</li>
+                <li><code>ew.flatten_deep_list(nested_list)</code>: Flattens a deeply nested list.</li>
+                <li><code>ew.generate_primes(limit)</code>: Generates all prime numbers up to the given limit.</li>
+                <li><code>ew.calculate_area_of_circle(radius)</code>: Calculates the area of a circle with the given radius.</li>
+                <li><code>ew.calculate_circumference_of_circle(radius)</code>: Calculates the circumference of a circle with the given radius.</li>
+                <li><code>ew.calculate_area_of_rectangle(length, width)</code>: Calculates the area of a rectangle with the given length and width.</li>
+                <li><code>ew.calculate_perimeter_of_rectangle(length, width)</code>: Calculates the perimeter of a rectangle with the given length and width.</li>
+                <li><code>ew.calculate_area_of_triangle(base, height)</code>: Calculates the area of a triangle with the given base and height.</li>
+                <li><code>ew.calculate_hypotenuse(a, b)</code>: Calculates the hypotenuse of a right-angled triangle given sides <code>a</code> and <code>b</code>.</li>
+                <li><code>ew.solve_quadratic_equation(a, b, c)</code>: Solves the quadratic equation <code>ax^2 + bx + c = 0</code> and returns the roots.</li>
+                <li><code>ew.convert_celsius_to_fahrenheit(celsius)</code>: Converts Celsius to Fahrenheit.</li>
+                <li><code>ew.convert_fahrenheit_to_celsius(fahrenheit)</code>: Converts Fahrenheit to Celsius.</li>
+                <li><code>ew.convert_inches_to_centimeters(inches)</code>: Converts inches to centimeters.</li>
+                <li><code>ew.convert_centimeters_to_inches(cm)</code>: Converts centimeters to inches.</li>
+                <li><code>ew.convert_pounds_to_kilograms(pounds)</code>: Converts pounds to kilograms.</li>
+                <li><code>ew.convert_kilograms_to_pounds(kg)</code>: Converts kilograms to pounds.</li>
+                <li><code>ew.find_hcf(a, b)</code>: Finds the highest common factor (HCF) of two numbers.</li>
+                <li><code>ew.find_lcm(a, b)</code>: Finds the least common multiple (LCM) of two numbers.</li>
+                <li><code>ew.calculate_percentage(part, whole)</code>: Calculates the percentage of part out of the whole.</li>
+                <li><code>ew.calculate_average_speed(distance, time)</code>: Calculates the average speed given distance and time.</li>
+                <li><code>ew.calculate_simple_interest(principal, rate, time)</code>: Calculates the simple interest given principal, rate, and time.</li>
+                <li><code>ew.calculate_compound_interest(principal, rate, time, n)</code>: Calculates the compound interest given principal, rate, time, and number of times interest is compounded per year.</li>
+                <li><code>ew.convert_string_to_binary(s)</code>: Converts a string to its binary representation.</li>
+                <li><code>ew.convert_binary_to_string(b)</code>: Converts a binary representation to its string form.</li>
+                <li><code>ew.get_environment_variable(var)</code>: Returns the value of the specified environment variable.</li>
+                <li><code>ew.set_environment_variable(var, value)</code>: Sets the value of the specified environment variable.</li>
+                <li><code>ew.list_environment_variables()</code>: Lists all environment variables.</li>
+                <li><code>ew.get_system_information()</code>: Returns system information.</li>
+                <li><code>ew.get_current_datetime()</code>: Returns the current date and time.</li>
+                <li><code>ew.get_day_of_week(date)</code>: Returns the day of the week for the given date.</li>
+                <li><code>ew.get_days_difference(date1, date2)</code>: Returns the difference in days between two dates.</li>
+                <li><code>ew.get_month_name(month_number)</code>: Returns the name of the month for the given month number.</li>
+                <li><code>ew.get_days_in_month(year, month)</code>: Returns the number of days in the given month and year.</li>
+                <li><code>ew.is_leap_year(year)</code>: Checks if the given year is a leap year.</li>
+                <li><code>ew.get_current_timestamp()</code>: Returns the current timestamp.</li>
+                <li><code>ew.convert_timestamp_to_datetime(timestamp)</code>: Converts a timestamp to a datetime object.</li>
+                <li><code>ew.get_elapsed_time(start_time)</code>: Returns the elapsed time since start_time.</li>
+                <li><code>ew.create_timer()</code>: Creates a timer object.</li>
+                <li><code>ew.stop_timer(timer)</code>: Stops the timer and returns the elapsed time.</li>
+                <li><code>ew.get_python_version()</code>: Returns the Python version.</li>
+                <li><code>ew.exit_program()</code>: Exits the program.</li>
+                <li><code>ew.get_file_lines_count(path)</code>: Returns the number of lines in the file at the specified path.</li>
+                <li><code>ew.get_file_word_count(path)</code>: Returns the number of words in the file at the specified path.</li>
+                <li><code>ew.get_file_character_count(path)</code>: Returns the number of characters in the file at the specified path.</li>
+                <li><code>ew.compare_files(file1, file2)</code>: Compares two files and returns True if they are identical, else False.</li>
+                <li><code>ew.copy_file(source, destination)</code>: Copies a file from source to destination.</li>
+                <li><code>ew.move_file(source, destination)</code>: Moves a file from source to destination.</li>
+                <li><code>ew.get_directory_size(directory)</code>: Returns the total size of all files in the specified directory.</li>
+                <li><code>ew.convert_string_to_hex(s)</code>: Converts a string to its hexadecimal representation.</li>
+                <li><code>ew.convert_hex_to_string(h)</code>: Converts a hexadecimal representation to its string form.</li>
+                <li><code>ew.get_local_ip_address()</code>: Returns the local IP address of the machine.</li>
+                <li><code>ew.get_public_ip_address()</code>: Returns the public IP address of the machine.</li>
+                <li><code>ew.create_zip_file(files, zip_name)</code>: Creates a zip file with the specified files.</li>
+                <li><code>ew.extract_zip_file(zip_name, extract_to)</code>: Extracts the specified zip file to the specified directory.</li>
+                <li><code>ew.compress_string(s)</code>: Compresses the given string using zlib.</li>
+                <li><code>ew.decompress_string(c)</code>: Decompresses the given string using zlib.</li>
             </ul>
+        </section>
+        <section id="examples">
+            <h2>Examples</h2>
+            <p>Here are some examples of how to use Earthworm in your Python scripts:</p>
+            <h3>Example 1: Simple Arithmetic</h3>
+            <pre><code>import earthworm as ew
+
+result = ew.add(5, 3)
+ew.output(f'The sum of 5 and 3 is {result}')
+</code></pre>
+            <h3>Example 2: User Interaction</h3>
+            <pre><code>import earthworm as ew
+
+name = ew.ask("What is your name? ")
+ew.output(f'Hello, {name}!')
+</code></pre>
+            <h3>Example 3: File Operations</h3>
+            <pre><code>import earthworm as ew
+
+ew.write_file("example.txt", "This is an example.")
+content = ew.read_file("example.txt")
+ew.output(content)
+</code></pre>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 Earthworm. All rights reserved.</p>
     </footer>
     <script>
-        function filterVersions() {
-            const searchInput = document.getElementById('searchBar').value.toLowerCase();
-            const versionList = document.getElementById('versionList');
-            const versions = versionList.getElementsByTagName('li');
+        document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('search-input');
+    const searchButton = document.getElementById('search-button');
 
-            for (let i = 0; i < versions.length; i++) {
-                const version = versions[i].getElementsByTagName('a')[0];
-                if (version.innerHTML.toLowerCase().indexOf(searchInput) > -1) {
-                    versions[i].style.display = '';
-                } else {
-                    versions[i].style.display = 'none';
-                }
+    searchButton.addEventListener('click', () => {
+        const query = searchInput.value.toLowerCase();
+        const sections = document.querySelectorAll('section');
+
+        sections.forEach(section => {
+            const text = section.innerText.toLowerCase();
+            if (text.includes(query)) {
+                section.style.display = 'block';
+            } else {
+                section.style.display = 'none';
             }
-        }
+        });
+    });
+});
+
     </script>
 </body>
 </html>
